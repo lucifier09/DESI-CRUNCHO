@@ -1,28 +1,4 @@
-from zipfile import ZipFile
-from pathlib import Path
-import shutil
-
-# Setup project folder
-project_dir = Path("/mnt/data/desi_cruncho_final_package")
-images_dir = project_dir / "images"
-project_dir.mkdir(parents=True, exist_ok=True)
-images_dir.mkdir(exist_ok=True)
-
-# Copy image files to images folder
-image_sources = {
-    "logo.png": "/mnt/data/logo.png",
-    "nimki.jpg": "/mnt/data/nimki.jpg",
-    "thekua.jpg": "/mnt/data/thekua.jpg",
-    "hero-bg.jpg": "/mnt/data/hero-bg.jpg"
-}
-
-for filename, src in image_sources.items():
-    src_path = Path(src)
-    if src_path.exists():
-        shutil.copy(src_path, images_dir / filename)
-
-# Final HTML content with correct WhatsApp number
-html_content = """
+ """
 <!DOCTYPE html>
 <html lang="en">
 <head>
