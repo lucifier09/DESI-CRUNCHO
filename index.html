@@ -86,20 +86,61 @@
     <div class="max-w-3xl mx-auto text-center">
       <h2 class="text-2xl font-bold text-orange-700 mb-4">Rate Us</h2>
       <p class="italic text-gray-600 mb-6">“Your feedback is the secret ingredient that makes Desi Cruncho more delicious.”</p>
-      <form class="space-y-4">
+      
+      <form id="feedbackForm" class="space-y-6" onsubmit="submitFeedback(event)">
+        <!-- Star Rating -->
         <div>
-          <label class="block text-lg mb-1">⭐ Your Rating:</label>
-          <div class="flex justify-center space-x-2 text-2xl">
-            <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+          <label class="block text-lg mb-2">⭐ Your Rating:</label>
+          <div id="stars" class="flex justify-center gap-2 text-3xl text-yellow-400 cursor-pointer">
+            <span onclick="rate(1)" id="star1">☆</span>
+            <span onclick="rate(2)" id="star2">☆</span>
+            <span onclick="rate(3)" id="star3">☆</span>
+            <span onclick="rate(4)" id="star4">☆</span>
+            <span onclick="rate(5)" id="star5">☆</span>
           </div>
+          <input type="hidden" name="rating" id="rating" value="0" />
         </div>
+
+        <!-- Feedback Text -->
         <div>
           <label class="block text-lg mb-1">📝 Your Feedback:</label>
-          <textarea rows="4" class="w-full border border-gray-300 p-3 rounded-lg" placeholder="Tell us what you think..."></textarea>
+          <textarea name="message" id="message" required rows="4" class="w-full p-3 border border-gray-300 rounded-lg" placeholder="Tell us what you think..."></textarea>
         </div>
-        <button type="submit" class="bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700">Submit</button>
+
+        <!-- Submit Button -->
+        <button type="submit" class="bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700">
+          Submit
+        </button>
       </form>
     </div>
+
+    <script>
+      let selectedStars = 0;
+
+      function rate(num) {
+        selectedStars = num;
+        document.getElementById("rating").value = num;
+
+        for (let i = 1; i <= 5; i++) {
+          document.getElementById("star" + i).textContent = i <= num ? "★" : "☆";
+        }
+      }
+
+      function submitFeedback(event) {
+        event.preventDefault();
+        const rating = document.getElementById("rating").value;
+        const message = document.getElementById("message").value;
+
+        if (rating === "0") {
+          alert("Please select a star rating before submitting.");
+          return;
+        }
+
+        alert(`✅ Thank you!\n\n⭐ Rating: ${rating} star(s)\n📝 Feedback: ${message}`);
+        document.getElementById("feedbackForm").reset();
+        rate(0); // Reset stars
+      }
+    </script>
   </section>
 
   <!-- Contact Section -->
