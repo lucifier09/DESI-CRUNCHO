@@ -1,97 +1,107 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Desi Cruncho - Homemade Snacks</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" href="logo.png" />
-</head>
-<body class="bg-orange-50 text-gray-800">
+<!-- Replace only the PRODUCTS and FEEDBACK section in your existing HTML -->
 
-  <!-- Header -->
-  <header class="bg-white shadow-md">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-      <div class="flex items-center space-x-4">
-        <img src="logo.png" alt="Desi Cruncho Logo" class="h-10 w-10 rounded-full"/>
-        <h1 class="text-2xl font-bold text-orange-600">Desi Cruncho</h1>
+<!-- ✅ PRODUCTS SECTION -->
+<section id="products" class="py-12 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-2xl font-bold text-center text-orange-700 mb-8">Our Products</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <!-- Thekua Card -->
+      <div class="bg-orange-50 p-6 rounded-xl shadow">
+        <img src="thekua.jpg" alt="Thekua" class="w-full h-auto max-h-60 object-contain rounded-t-xl mb-4">
+        <h3 class="text-xl font-semibold text-orange-800">Thekua</h3>
+        <p class="text-lg mt-1">Weight: <strong>800gm</strong></p>
+        <p class="text-lg">Price: <span class="line-through">₹350</span> <span class="text-green-600 font-bold ml-2">₹297 (15% OFF)</span></p>
+        <a href="https://wa.me/919324410301?text=Hi! I want to order Thekua from Desi Cruncho." 
+           class="inline-block mt-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">
+          Order on WhatsApp
+        </a>
       </div>
-      <nav class="space-x-6 font-semibold text-gray-700">
-        <a href="#home" class="hover:text-orange-600">Home</a>
-        <a href="#products" class="hover:text-orange-600">Products</a>
-        <a href="#about" class="hover:text-orange-600">About Us</a>
-        <a href="#contact" class="hover:text-orange-600">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <!-- Hero Section -->
-  <section id="home">
-    <div class="bg-cover bg-center py-32 text-center text-white" style="background-image: url('hero-bg.jpg');">
-      <h2 class="text-4xl font-bold drop-shadow-md">Welcome to Desi Cruncho</h2>
-      <p class="mt-4 text-xl font-medium drop-shadow-md">Enjoy the taste of tradition with our handmade snacks!</p>
-    </div>
-  </section>
-
-  <!-- Products Section -->
-  <section id="products" class="py-12 bg-white">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl font-bold text-center text-orange-700 mb-8">Our Products</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-        <!-- Thekua Card -->
-        <div class="bg-orange-50 p-6 rounded-xl shadow">
-          <img src="thekua.jpg" alt="Thekua" class="w-full h-auto max-h-60 object-contain rounded-t-xl mb-4">
-          <h3 class="text-xl font-semibold text-orange-800">Thekua</h3>
-          <p class="text-lg mt-1">Price: 70</p>
-          <a href="https://wa.me/919324410301?text=Hi! I want to order Thekua from Desi Cruncho." 
-             class="inline-block mt-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">
-            Order on WhatsApp
-          </a>
-        </div>
-
-        <!-- Nimki Card -->
-        <div class="bg-orange-50 p-6 rounded-xl shadow">
-          <img src="nimki.jpg" alt="Nimki" class="w-full h-auto max-h-60 object-contain rounded-t-xl mb-4">
-          <h3 class="text-xl font-semibold text-orange-800">Nimki</h3>
-          <p class="text-lg mt-1">Price: 75</p>
-          <a href="https://wa.me/919324410301?text=Hi! I want to order Nimki from Desi Cruncho." 
-             class="inline-block mt-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">
-            Order on WhatsApp
-          </a>
-        </div>
-
+      <!-- Nimki Card -->
+      <div class="bg-orange-50 p-6 rounded-xl shadow">
+        <img src="nimki.jpg" alt="Nimki" class="w-full h-auto max-h-60 object-contain rounded-t-xl mb-4">
+        <h3 class="text-xl font-semibold text-orange-800">Nimki</h3>
+        <p class="text-lg mt-1">Weight: <strong>800gm</strong></p>
+        <p class="text-lg">Price: <span class="line-through">₹375</span> <span class="text-green-600 font-bold ml-2">₹319 (15% OFF)</span></p>
+        <a href="https://wa.me/919324410301?text=Hi! I want to order Nimki from Desi Cruncho." 
+           class="inline-block mt-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">
+          Order on WhatsApp
+        </a>
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- About Us Section -->
-  <section id="about" class="bg-orange-100 py-12 px-4">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-2xl font-bold text-orange-700 mb-4">Our Story</h2>
-      <p class="text-lg leading-relaxed text-gray-700">
-        At <strong>Desi Cruncho</strong>, we believe in the magic of tradition. Born from the love of authentic homemade snacks,
-        our journey started in a small kitchen in Vashi, Navi Mumbai. Every Thekua and Nimki we make carries the essence of
-        warmth, simplicity, and grandma's recipes. We aim to bring a smile to your face with every crunchy bite. Your trust
-        is our biggest ingredient, and your satisfaction is our biggest reward.
-      </p>
+<!-- ✅ FEEDBACK SECTION WITH PUBLIC COMMENTS -->
+<section class="bg-yellow-50 py-10 px-6 md:px-20" id="rate-us">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-yellow-900 mb-4">Rate Us</h2>
+    <p class="text-lg text-gray-700 mb-6 italic">
+      “Your feedback is the secret ingredient that makes Desi Cruncho more delicious.”
+    </p>
+
+    <!-- Interactive Star Ratings -->
+    <div id="stars" class="flex justify-center mb-6 text-yellow-500 text-3xl cursor-pointer">
+      <i class="fas fa-star" data-value="1"></i>
+      <i class="fas fa-star" data-value="2"></i>
+      <i class="fas fa-star" data-value="3"></i>
+      <i class="fas fa-star" data-value="4"></i>
+      <i class="fas fa-star" data-value="5"></i>
     </div>
-  </section>
 
- <!-- Contact Section -->
-  <section id="contact" class="bg-white py-12 px-4">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-2xl font-bold text-orange-700 mb-4">Contact Us</h2>
-      <p class="text-lg mb-2">📞 <strong>Phone:</strong> <a href="tel:9324410301" class="text-blue-600 hover:underline">9324410301</a></p>
-      <p class="text-lg mb-2">📧 <strong>Email:</strong> <a href="mailto:desicruncho@gmail.com" class="text-blue-600 hover:underline">desicruncho@gmail.com</a></p>
-      <p class="text-lg">📍 <strong>Address:</strong> Vashi, Navi Mumbai – 400703</p>
-    </div>
-  </section>
+    <!-- Feedback Form -->
+    <form id="feedbackForm" class="bg-white rounded-xl shadow-md p-6 max-w-xl mx-auto">
+      <label for="feedback" class="block text-left text-gray-800 font-semibold mb-2">Your Feedback</label>
+      <textarea id="feedback" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="Share your experience..."></textarea>
 
-  <!-- Footer -->
-  <footer class="bg-orange-600 text-white text-center py-4 mt-8">
-    &copy; 2025 Desi Cruncho. All rights reserved.
-  </footer>
+      <input type="hidden" id="rating" name="rating" value="5">
 
-</body>
-</html>
+      <button type="submit" class="mt-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+        Submit
+      </button>
+    </form>
+
+    <!-- Submitted Feedback Display -->
+    <div id="feedbackList" class="mt-10 text-left max-w-xl mx-auto space-y-4"></div>
+  </div>
+</section>
+
+<!-- ⭐ JavaScript for Star Rating + Show Submitted Feedback -->
+<script>
+  const stars = document.querySelectorAll('#stars i');
+  const ratingInput = document.getElementById('rating');
+  const form = document.getElementById('feedbackForm');
+  const feedbackList = document.getElementById('feedbackList');
+
+  stars.forEach((star, index) => {
+    star.addEventListener('click', () => {
+      const rating = index + 1;
+      ratingInput.value = rating;
+
+      stars.forEach((s, i) => {
+        s.classList.toggle('text-yellow-500', i < rating);
+        s.classList.toggle('text-gray-300', i >= rating);
+      });
+    });
+  });
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const feedback = document.getElementById('feedback').value;
+    const rating = ratingInput.value;
+
+    if (feedback.trim() !== "") {
+      const entry = document.createElement('div');
+      entry.className = 'bg-white p-4 border-l-4 border-yellow-500 rounded shadow';
+
+      entry.innerHTML = `
+        <div class="text-yellow-600 text-xl mb-1">${'★'.repeat(rating)}${'☆'.repeat(5 - rating)}</div>
+        <p class="text-gray-800">${feedback}</p>
+      `;
+      feedbackList.prepend(entry);
+      form.reset();
+    }
+  });
+</script>
